@@ -19,21 +19,29 @@
   <main class="flex-shrink-0">
     <div class="container col-xxl-8 px-4 py-5">
       <div class="row row-cols-1 row-cols-lg-2 g-3 py-3">
-        <div class="col border border-3 rounded-1 order-last order-lg-first text-center">
+        <div class="col order-first order-lg-first text-center">
 
-          <!-- Stop! - Most important to get attention. Should be alerting but not alarming. -->
-          <h1 class="display-2 lead text-center"><strong>STOP!</strong></h1>
-          <h1 class="display-3 lead text-center"><strong>BEFORE YOU PROCEED</strong></h1>
-          <!-- Information - This site has been identified as potentially malicious. We suggest you return to the site you were at previously. -->
-          <div class="fa-ul pt-2 checklist text-center">
-            <div>
-              <span class="fa-li m-2"><i class="fas fa-check-square"></i></span>This site has been identified as potentially malicious. We suggest you return to the site you were at previously.
-            </div>
-            <form class="m-3">
-              <button type="submit" value="Return to Safety" class="btn btn-lg btn-success" onclick="history.back()">Return to Safety</button>
-            </form>
+          <div class="col text-center bg bg-alert">        
+            <img src="images/ShieldIcon.jpg" style="height: 250px" class="img-fluid center-block d-block mx-auto " alt="ShieldIcon">
           </div>
-
+          <div class="border border-3 rounded-1 m-3 p-3">
+            <!-- Stop! - Most important to get attention. Should be alerting but not alarming. -->
+            <h1 class="display-2 lead text-center"><strong>STOP!</strong></h1>
+            <h1 class="display-3 lead text-center"><strong>BEFORE YOU PROCEED</strong></h1>
+            <!-- Information - This site has been identified as potentially malicious. We suggest you return to the site you were at previously. -->
+            <div class="fa-ul pt-2 checklist text-center">
+              <div>
+                <span class="fa-li m-2"><i class="fas fa-check-square"></i></span>This site has been identified as potentially malicious. We suggest you return to the site you were at previously.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <form class="m-3">
+            <button type="submit" value="Return to Safety" class="btn btn-lg btn-success" onclick="history.back()">Return to Safety</button>
+          </form>
+        </div>
+        <div>
           <!-- Hidden Option (Need to be clicked to reveal) -->
           <button class="btn btn-danger btn-sm" id="revealButton">I wish to continue</button>
           <div id="hiddenContent" class="hidden">
@@ -42,13 +50,9 @@
                 <a href="#" class="text-danger">Malicious URL</a>
               </div>
           </div>
-
-
-        </div>
-        <div class="col text-center bg bg-alert">        
-          <img src="images/ShieldIcon.jpg" style="height: 250px" class="img-fluid center-block d-block mx-auto " alt="ShieldIcon">
         </div>
       </div>
+    </div>
 
     </div>
   </main>
